@@ -9,8 +9,11 @@ import Foundation
 
 
 struct Lancamento: Codable {
-    var statementList: [LancamentoList]
+    var statementList: [LancamentoList]?
     
+    enum CodingKeys: String, CodingKey {
+        case statementList = "statementList"
+    }
 }
 
 struct LancamentoList: Codable {
@@ -25,4 +28,12 @@ struct LancamentoList: Codable {
         case date = "date"
         case value = "value"
     }
+}
+
+struct LancamentoConvert: Codable {
+    var title: String?
+    var desc: String?
+    var date: String?
+    var value: String?
+    
 }

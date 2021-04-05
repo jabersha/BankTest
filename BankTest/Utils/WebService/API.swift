@@ -26,6 +26,7 @@ class API{
                         let decoder = JSONDecoder()
                         let data = try decoder.decode(Cliente.self, from: response.data!)
                         
+                        print(data)
                         completionBlock(data)
                     } catch {
                         print(error)
@@ -39,7 +40,7 @@ class API{
         }
     }
     
-    func getStatement(){
+    func getStatement(userId: String,completionBlock: @escaping (_ success: Lancamento) -> Void){
         
         let url = "https://bank-app-test.herokuapp.com/api/statements/1"
 
@@ -52,7 +53,7 @@ class API{
                         let decoder = JSONDecoder()
                         let data = try decoder.decode(Lancamento.self, from: response.data!)
                         
-                        print(data)
+                        completionBlock(data)
                     } catch {
                         print(error)
                     }

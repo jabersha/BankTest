@@ -31,3 +31,12 @@ struct ClienteDetalhes: Codable {
         case balance = "balance"
     }
 }
+
+struct ClienteConvert: Codable {
+    var userId: Int?
+    var name: String?
+    var account : String?
+    var balance: String?
+
+}
+

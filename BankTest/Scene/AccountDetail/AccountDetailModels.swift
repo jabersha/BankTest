@@ -15,15 +15,14 @@ import UIKit
 enum AccountDetail{
   // MARK: Use cases
   
-  enum Something{
-    struct Request
-    {
+  enum Load{
+    struct Request{
     }
-    struct Response
-    {
+    struct Response{
+        var statement:Lancamento
     }
-    struct ViewModel
-    {
+    struct ViewModel{
+        var statement:[LancamentoConvert]
     }
   }
 }

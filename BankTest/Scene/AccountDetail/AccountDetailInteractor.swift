@@ -13,27 +13,28 @@
 import UIKit
 
 protocol AccountDetailBusinessLogic{
-  func doSomething(request: AccountDetail.Something.Request)
+  func doLoad(request: AccountDetail.Load.Request)
 }
 
 protocol AccountDetailDataStore{
-  var clienteData: Cliente { get set }
+  var clienteData: ClienteConvert { get set }
 }
 
 class AccountDetailInteractor: AccountDetailBusinessLogic, AccountDetailDataStore{
     var presenter: AccountDetailPresentationLogic?
     var worker: AccountDetailWorker?
-    var clienteData = Cliente()
+    var clienteData = ClienteConvert()
 
   //var name: String = ""
   
   // MARK: Do something
   
-  func doSomething(request: AccountDetail.Something.Request){
+  func doLoad(request: AccountDetail.Load.Request){
     worker = AccountDetailWorker()
-    worker?.doSomeWork()
-    
-    let response = AccountDetail.Something.Response()
-    presenter?.presentSomething(response: response)
+    let user = "\(clienteData.userId ?? 0)"
+    worker?.doGetData(userId: user ,completionHandler: { (result) in
+        let response = AccountDetail.Load.Response(statement: result)
+        self.presenter?.presentSomething(response: response)
+    })
   }
 }

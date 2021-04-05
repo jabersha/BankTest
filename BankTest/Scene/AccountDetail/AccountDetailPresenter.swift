@@ -13,7 +13,7 @@
 import UIKit
 
 protocol AccountDetailPresentationLogic{
-  func presentSomething(response: AccountDetail.Something.Response)
+  func presentSomething(response: AccountDetail.Load.Response)
 }
 
 class AccountDetailPresenter: AccountDetailPresentationLogic{
@@ -21,8 +21,26 @@ class AccountDetailPresenter: AccountDetailPresentationLogic{
   
   // MARK: Do something
   
-  func presentSomething(response: AccountDetail.Something.Response){
-    let viewModel = AccountDetail.Something.ViewModel()
+  func presentSomething(response: AccountDetail.Load.Response){
+    
+    var list = [LancamentoConvert]()
+    
+    for result in response.statement.statementList!{
+        let currencyFormateer = NumberFormatter()
+        currencyFormateer.locale = Locale(identifier: "pt-br")
+        currencyFormateer.numberStyle = .currency
+        let price = currencyFormateer.string(from: NSNumber(value: result.value))!
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let showDate = dateFormatter.date(from: result.date)
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        let date = dateFormatter.string(from: showDate!)
+        list.append(LancamentoConvert.init(title: result.title, desc: result.desc, date: date, value: price))
+    }
+    
+    
+    let viewModel = AccountDetail.Load.ViewModel(statement: list)
     viewController?.displaySomething(viewModel: viewModel)
   }
 }

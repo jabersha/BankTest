@@ -13,15 +13,26 @@
 import UIKit
 
 protocol AccountDetailDisplayLogic: class{
-  func displaySomething(viewModel: AccountDetail.Something.ViewModel)
+  func displaySomething(viewModel: AccountDetail.Load.ViewModel)
 }
 
-class AccountDetailViewController: UIViewController, AccountDetailDisplayLogic{
+class AccountDetailViewController: UIViewController, AccountDetailDisplayLogic, UITableViewDelegate, UITableViewDataSource{
+    
   var interactor: AccountDetailBusinessLogic?
   var router: (NSObjectProtocol & AccountDetailRoutingLogic & AccountDetailDataPassing)?
 
-  // MARK: Object lifecycle
-  
+    @IBOutlet weak var clienteLb: UILabel!
+    // MARK: Object lifecycle
+    @IBOutlet weak var contaLb: UILabel!
+    @IBOutlet weak var saldoLb: UILabel!
+    @IBOutlet weak var table: UITableView!
+    @IBAction func logoutBtn(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+
+    }
+    
+    var list = [LancamentoConvert]()
+    
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?){
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     setup()
@@ -62,19 +73,61 @@ class AccountDetailViewController: UIViewController, AccountDetailDisplayLogic{
   
   override func viewDidLoad(){
     super.viewDidLoad()
-    doSomething()
+    table.delegate = self
+    table.dataSource = self
+    loadDataClient()
+    doLoadInitialData()
   }
   
   // MARK: Do something
   
   //@IBOutlet weak var nameTextField: UITextField!
   
-  func doSomething(){
-    let request = AccountDetail.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: AccountDetail.Something.ViewModel){
-    //nameTextField.text = viewModel.name
-  }
+    func doLoadInitialData(){
+        let request = AccountDetail.Load.Request()
+        interactor?.doLoad(request: request)
+    }
+
+    func displaySomething(viewModel: AccountDetail.Load.ViewModel){
+        list = viewModel.statement
+        table.reloadData()
+    }
+    
+    func loadDataClient(){
+        clienteLb.text = router?.dataStore?.clienteData.name
+        contaLb.text = router?.dataStore?.clienteData.account
+        saldoLb.text = router?.dataStore?.clienteData.balance
+    }
+    
+    
+    
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LancamentoCell", for: indexPath) as! LancamentoCell
+
+        cell.data.text = list[indexPath.section].date
+        cell.valor.text = list[indexPath.section].value
+        cell.descricao.text = list[indexPath.section].desc
+        cell.titulo.text = list[indexPath.section].title
+
+        
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return list.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 12.0
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 12.0
+    }
 }

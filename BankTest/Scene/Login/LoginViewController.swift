@@ -110,6 +110,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic{
     }
     
     func displayDetail(viewModel: Login.Logged.ViewModel) {
+        passField.text = ""
         router?.routeToDetail(segue: nil)
     }
     

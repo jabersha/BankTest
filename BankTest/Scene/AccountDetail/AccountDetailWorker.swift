@@ -13,7 +13,11 @@
 import UIKit
 
 class AccountDetailWorker{
-  func doSomeWork()
-  {
+  func doGetData(userId: String, completionHandler: @escaping (_ result: Lancamento)-> Void){
+    let api = API()
+    api.getStatement(userId: userId) { (result) in
+        completionHandler(result)
+    }
+    
   }
 }

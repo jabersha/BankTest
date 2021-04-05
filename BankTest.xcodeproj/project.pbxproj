@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,6 +30,7 @@
 		153DF756261AF00B00D2364C /* AccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153DF750261AF00B00D2364C /* AccountDetailViewController.swift */; };
 		153DF757261AF00B00D2364C /* AccountDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153DF751261AF00B00D2364C /* AccountDetailInteractor.swift */; };
 		153DF765261AF0FB00D2364C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153DF764261AF0FB00D2364C /* API.swift */; };
+		15ECCF02261B144600B9B679 /* LancamentoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ECCF01261B144600B9B679 /* LancamentoCell.swift */; };
 		67125D5451C422E476FB5DBA /* Pods_BankTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F2F4D5A78B0D4EBFC3FF63 /* Pods_BankTest.framework */; };
 		CAE79A670C0E743037D804BC /* Pods_BankTest_BankTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B324AE3747BBE801715BA044 /* Pods_BankTest_BankTestUITests.framework */; };
 		DCEF3E6F9A024F81F84C88A4 /* Pods_BankTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EB719E8F428A1D379F2AE8 /* Pods_BankTestTests.framework */; };
@@ -82,6 +83,7 @@
 		153DF750261AF00B00D2364C /* AccountDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailViewController.swift; sourceTree = "<group>"; };
 		153DF751261AF00B00D2364C /* AccountDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailInteractor.swift; sourceTree = "<group>"; };
 		153DF764261AF0FB00D2364C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		15ECCF01261B144600B9B679 /* LancamentoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LancamentoCell.swift; sourceTree = "<group>"; };
 		23EB719E8F428A1D379F2AE8 /* Pods_BankTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A28A4B73B9B2DFF80C89AADB /* Pods-BankTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankTest.debug.xcconfig"; path = "Target Support Files/Pods-BankTest/Pods-BankTest.debug.xcconfig"; sourceTree = "<group>"; };
 		B324AE3747BBE801715BA044 /* Pods_BankTest_BankTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankTest_BankTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,7 +143,6 @@
 				E3E93B54670A94F4F6C55982 /* Pods-BankTestTests.debug.xcconfig */,
 				CE932E260E92FA83B751934E /* Pods-BankTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -234,6 +235,7 @@
 		153DF709261AC8BF00D2364C /* AccountDetail */ = {
 			isa = PBXGroup;
 			children = (
+				15ECCF00261B141E00B9B679 /* View */,
 				153DF74C261AF00B00D2364C /* AccountDetailPresenter.swift */,
 				153DF74D261AF00B00D2364C /* AccountDetailWorker.swift */,
 				153DF74E261AF00B00D2364C /* AccountDetailRouter.swift */,
@@ -276,6 +278,14 @@
 				153DF764261AF0FB00D2364C /* API.swift */,
 			);
 			path = WebService;
+			sourceTree = "<group>";
+		};
+		15ECCF00261B141E00B9B679 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15ECCF01261B144600B9B679 /* LancamentoCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -527,6 +537,7 @@
 				153DF712261AC8D400D2364C /* LoginRouter.swift in Sources */,
 				153DF740261AE7A800D2364C /* Cliente.swift in Sources */,
 				153DF714261AC8D400D2364C /* LoginViewController.swift in Sources */,
+				15ECCF02261B144600B9B679 /* LancamentoCell.swift in Sources */,
 				153DF6D4261AC88B00D2364C /* AppDelegate.swift in Sources */,
 				153DF6D6261AC88B00D2364C /* SceneDelegate.swift in Sources */,
 				153DF753261AF00B00D2364C /* AccountDetailWorker.swift in Sources */,

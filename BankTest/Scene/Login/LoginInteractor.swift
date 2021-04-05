@@ -18,7 +18,7 @@ protocol LoginBusinessLogic{
 }
 
 protocol LoginDataStore{
-    var clienteData: Cliente { get set }
+    var clienteData: ClienteConvert { get set }
 
 }
 
@@ -26,7 +26,7 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore{
     
     var presenter: LoginPresentationLogic?
     var worker: LoginWorker?
-    var clienteData = Cliente()
+    var clienteData = ClienteConvert()
 
   //var name: String = ""
   
@@ -44,8 +44,23 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore{
         worker = LoginWorker()
         worker?.doLogin(login: request.login, completionHandler: { (result) in
             let data = result
-            self.clienteData = data
-            let response = Login.Logged.Response(cliente: result)
+            
+            let currencyFormateer = NumberFormatter()
+            currencyFormateer.locale = Locale(identifier: "pt-br")
+            currencyFormateer.numberStyle = .currency
+            let price = currencyFormateer.string(from: NSNumber(value: result.userAccount!.balance))
+    
+            var agency = result.userAccount?.agency
+            agency!.insert(".", at: (agency?.index(agency!.startIndex, offsetBy: 2))!)
+            agency!.insert("-", at: (agency?.index(agency!.startIndex, offsetBy: 9))!)
+            
+            let conta = "\(result.userAccount?.bankAccount ?? "") / \(agency ?? "")"
+            
+            self.clienteData.name = result.userAccount?.name
+            self.clienteData.account = conta
+            self.clienteData.balance = price
+            
+            let response = Login.Logged.Response(cliente: data)
             self.presenter?.presentDetail(response: response)
 //            
         })
