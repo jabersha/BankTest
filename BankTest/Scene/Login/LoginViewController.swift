@@ -23,8 +23,24 @@ class LoginViewController: UIViewController, LoginDisplayLogic{
     @IBOutlet var loginBtn: UIButton!
     @IBOutlet var userView: UIView!
     @IBOutlet var passView: UIView!
-
-
+    @IBOutlet weak var userField: UITextField!
+    @IBOutlet weak var passField: UITextField!
+    
+    
+    @IBAction func loginActBtn(_ sender: Any) {
+        
+        let data1 = userField.text
+        let data2 = passField.text
+        
+        if data1 != nil && data2 != nil{
+            if data2!.isValidPass && data1!.isValidEmail || data1!.isValidCPF || data1!.isValidCPFNumber{
+                print("Válido")
+            }
+            
+        }
+        
+    }
+    
   // MARK: Object lifecycle
   
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?){
@@ -68,7 +84,8 @@ class LoginViewController: UIViewController, LoginDisplayLogic{
   override func viewDidLoad(){
     super.viewDidLoad()
     loadLayoutConfig()
-    doSomething()
+    lastLogin()
+//    doSomething()
   }
   
   // MARK: Do something
@@ -97,5 +114,30 @@ class LoginViewController: UIViewController, LoginDisplayLogic{
         self.loginBtn.layer.cornerRadius = 4
     }
     
+    func lastLogin(){
+        guard let lastUser = UserDefaults.standard.string(forKey: CacheKeys.lastLogin.rawValue)
+        else {return}
+        
+        self.userField.text = lastUser
+    }
     
+}
+    
+extension String{
+    var isValidEmail: Bool {
+            NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").evaluate(with: self)
+    }
+        
+    var isValidCPFNumber: Bool{
+            NSPredicate(format: "SELF MATCHES %@", "[0-9]{11}").evaluate(with: self)
+    }
+    
+    var isValidCPF: Bool{
+            NSPredicate(format: "SELF MATCHES %@", "[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}").evaluate(with: self)
+    }
+    
+    var isValidPass:Bool{
+        NSPredicate(format: "SELF MATCHES %@", "(?=[^a-z]*[a-z])(?=[^0-9]*[0-9])[a-zA-Z0-9!@#$%^&*]{4,}"
+).evaluate(with: self)
+    }
 }
