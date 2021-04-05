@@ -13,10 +13,13 @@
     import UIKit
 
 protocol LoginDisplayLogic: class{
-  func displaySomething(viewModel: Login.Something.ViewModel)
+    func displaySomething(viewModel: Login.Something.ViewModel)
+    func displayDetail(viewModel: Login.Logged.ViewModel)
+
 }
 
 class LoginViewController: UIViewController, LoginDisplayLogic{
+        
     var interactor: LoginBusinessLogic?
     var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
     
@@ -34,7 +37,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic{
         
         if data1 != nil && data2 != nil{
             if data2!.isValidPass && data1!.isValidEmail || data1!.isValidCPF || data1!.isValidCPFNumber{
-                print("Válido")
+                doLogin(login: data1!)
             }
             
         }
@@ -92,14 +95,23 @@ class LoginViewController: UIViewController, LoginDisplayLogic{
   
   //@IBOutlet weak var nameTextField: UITextField!
   
-  func doSomething(){
-    let request = Login.Something.Request()
-    interactor?.doSomething(request: request)
-  }
+//    func doSomething(){
+//    let request = Login.Something.Request()
+//    interactor?.doSomething(request: request)
+//    }
+    
+    func doLogin(login:String){
+        let request = Login.Something.Request(login: login)
+        interactor?.doLogin(request: request)
+    }
   
-  func displaySomething(viewModel: Login.Something.ViewModel){
+    func displaySomething(viewModel: Login.Something.ViewModel){
     //nameTextField.text = viewModel.name
-  }
+    }
+    
+    func displayDetail(viewModel: Login.Logged.ViewModel) {
+        router?.routeToDetail(segue: nil)
+    }
     
     func loadLayoutConfig(){
         self.userView.layer.cornerRadius = 4

@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Cliente: Codable {
-    var userAccount: ClienteDetalhes
+struct Cliente: Codable{
+    var userAccount: ClienteDetalhes?
     
     enum CodingKeys: String, CodingKey {
         case userAccount = "userAccount"

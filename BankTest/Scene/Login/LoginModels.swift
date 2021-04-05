@@ -18,8 +18,21 @@ enum Login{
     enum Something{
             
         struct Request{
+            var login: String
         }
         struct Response{
+        }
+        struct ViewModel{
+        }
+    }
+    
+    enum Logged{
+            
+        struct Request{
+            var login: String
+        }
+        struct Response{
+            var cliente: Cliente
         }
         struct ViewModel{
         }

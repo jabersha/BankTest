@@ -12,19 +12,34 @@
 
 import UIKit
 
-    @objc protocol LoginRoutingLogic{
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
-    }
+@objc protocol LoginRoutingLogic{
+    func routeToDetail(segue: UIStoryboardSegue?)
+}
 
-    protocol LoginDataPassing{
+protocol LoginDataPassing{
     var dataStore: LoginDataStore? { get }
-    }
+}
 
-    class LoginRouter: NSObject, LoginRoutingLogic, LoginDataPassing{
+class LoginRouter: NSObject, LoginRoutingLogic, LoginDataPassing{
+
     weak var viewController: LoginViewController?
     var dataStore: LoginDataStore?
 
     // MARK: Routing
+    
+    func routeToDetail(segue: UIStoryboardSegue?) {
+        if segue != nil {
+    //      let destinationVC = segue.destination as! SomewhereViewController
+    //      var destinationDS = destinationVC.router!.dataStore!
+    //      passDataToSomewhere(source: dataStore!, destination: &destinationDS)
+        } else {
+          let storyboard = UIStoryboard(name: "Main", bundle: nil)
+          let destinationVC = storyboard.instantiateViewController(withIdentifier: "AccountDetailViewController") as! AccountDetailViewController
+          var destinationDS = destinationVC.router!.dataStore!
+          passDataToSomewhere(source: dataStore!, destination: &destinationDS)
+          navigateToSomewhere(source: viewController!, destination: destinationVC)
+        }
+    }
 
     //func routeToSomewhere(segue: UIStoryboardSegue?)
     //{
@@ -43,15 +58,14 @@ import UIKit
 
     // MARK: Navigation
 
-    //func navigateToSomewhere(source: LoginViewController, destination: SomewhereViewController)
-    //{
-    //  source.show(destination, sender: nil)
-    //}
+    func navigateToSomewhere(source: LoginViewController, destination: AccountDetailViewController)
+    {
+      source.show(destination, sender: nil)
+    }
 
     // MARK: Passing data
 
-    //func passDataToSomewhere(source: LoginDataStore, destination: inout SomewhereDataStore)
-    //{
-    //  destination.name = source.name
-    //}
+    func passDataToSomewhere(source: LoginDataStore, destination: inout AccountDetailDataStore){
+        destination.clienteData   = source.clienteData
     }
+}

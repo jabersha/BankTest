@@ -23,6 +23,16 @@
 		153DF72C261AD46A00D2364C /* CacheKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153DF72B261AD46A00D2364C /* CacheKeys.swift */; };
 		153DF740261AE7A800D2364C /* Cliente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153DF73F261AE7A800D2364C /* Cliente.swift */; };
 		153DF748261AE9C000D2364C /* Lancamentos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153DF747261AE9C000D2364C /* Lancamentos.swift */; };
+		153DF752261AF00B00D2364C /* AccountDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153DF74C261AF00B00D2364C /* AccountDetailPresenter.swift */; };
+		153DF753261AF00B00D2364C /* AccountDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153DF74D261AF00B00D2364C /* AccountDetailWorker.swift */; };
+		153DF754261AF00B00D2364C /* AccountDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153DF74E261AF00B00D2364C /* AccountDetailRouter.swift */; };
+		153DF755261AF00B00D2364C /* AccountDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153DF74F261AF00B00D2364C /* AccountDetailModels.swift */; };
+		153DF756261AF00B00D2364C /* AccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153DF750261AF00B00D2364C /* AccountDetailViewController.swift */; };
+		153DF757261AF00B00D2364C /* AccountDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153DF751261AF00B00D2364C /* AccountDetailInteractor.swift */; };
+		153DF765261AF0FB00D2364C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153DF764261AF0FB00D2364C /* API.swift */; };
+		67125D5451C422E476FB5DBA /* Pods_BankTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F2F4D5A78B0D4EBFC3FF63 /* Pods_BankTest.framework */; };
+		CAE79A670C0E743037D804BC /* Pods_BankTest_BankTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B324AE3747BBE801715BA044 /* Pods_BankTest_BankTestUITests.framework */; };
+		DCEF3E6F9A024F81F84C88A4 /* Pods_BankTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EB719E8F428A1D379F2AE8 /* Pods_BankTestTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +75,22 @@
 		153DF72B261AD46A00D2364C /* CacheKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheKeys.swift; sourceTree = "<group>"; };
 		153DF73F261AE7A800D2364C /* Cliente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cliente.swift; sourceTree = "<group>"; };
 		153DF747261AE9C000D2364C /* Lancamentos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lancamentos.swift; sourceTree = "<group>"; };
+		153DF74C261AF00B00D2364C /* AccountDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailPresenter.swift; sourceTree = "<group>"; };
+		153DF74D261AF00B00D2364C /* AccountDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailWorker.swift; sourceTree = "<group>"; };
+		153DF74E261AF00B00D2364C /* AccountDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailRouter.swift; sourceTree = "<group>"; };
+		153DF74F261AF00B00D2364C /* AccountDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailModels.swift; sourceTree = "<group>"; };
+		153DF750261AF00B00D2364C /* AccountDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailViewController.swift; sourceTree = "<group>"; };
+		153DF751261AF00B00D2364C /* AccountDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailInteractor.swift; sourceTree = "<group>"; };
+		153DF764261AF0FB00D2364C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		23EB719E8F428A1D379F2AE8 /* Pods_BankTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A28A4B73B9B2DFF80C89AADB /* Pods-BankTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankTest.debug.xcconfig"; path = "Target Support Files/Pods-BankTest/Pods-BankTest.debug.xcconfig"; sourceTree = "<group>"; };
+		B324AE3747BBE801715BA044 /* Pods_BankTest_BankTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankTest_BankTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF8EAB67BEE2E48A72C185BD /* Pods-BankTest-BankTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankTest-BankTestUITests.release.xcconfig"; path = "Target Support Files/Pods-BankTest-BankTestUITests/Pods-BankTest-BankTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CBE9801741336D0305164B30 /* Pods-BankTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankTest.release.xcconfig"; path = "Target Support Files/Pods-BankTest/Pods-BankTest.release.xcconfig"; sourceTree = "<group>"; };
+		CE932E260E92FA83B751934E /* Pods-BankTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankTestTests.release.xcconfig"; path = "Target Support Files/Pods-BankTestTests/Pods-BankTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		D7C5150447FEAB6D76F75F60 /* Pods-BankTest-BankTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankTest-BankTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-BankTest-BankTestUITests/Pods-BankTest-BankTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3E93B54670A94F4F6C55982 /* Pods-BankTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankTestTests.debug.xcconfig"; path = "Target Support Files/Pods-BankTestTests/Pods-BankTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E6F2F4D5A78B0D4EBFC3FF63 /* Pods_BankTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67125D5451C422E476FB5DBA /* Pods_BankTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCEF3E6F9A024F81F84C88A4 /* Pods_BankTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,12 +114,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAE79A670C0E743037D804BC /* Pods_BankTest_BankTestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01BAF05A48206360B0B23E07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6F2F4D5A78B0D4EBFC3FF63 /* Pods_BankTest.framework */,
+				B324AE3747BBE801715BA044 /* Pods_BankTest_BankTestUITests.framework */,
+				23EB719E8F428A1D379F2AE8 /* Pods_BankTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0C38CED2ED8308121C763428 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A28A4B73B9B2DFF80C89AADB /* Pods-BankTest.debug.xcconfig */,
+				CBE9801741336D0305164B30 /* Pods-BankTest.release.xcconfig */,
+				D7C5150447FEAB6D76F75F60 /* Pods-BankTest-BankTestUITests.debug.xcconfig */,
+				BF8EAB67BEE2E48A72C185BD /* Pods-BankTest-BankTestUITests.release.xcconfig */,
+				E3E93B54670A94F4F6C55982 /* Pods-BankTestTests.debug.xcconfig */,
+				CE932E260E92FA83B751934E /* Pods-BankTestTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		153DF6C7261AC88A00D2364C = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +152,8 @@
 				153DF6E9261AC88E00D2364C /* BankTestTests */,
 				153DF6F4261AC88E00D2364C /* BankTestUITests */,
 				153DF6D1261AC88B00D2364C /* Products */,
+				0C38CED2ED8308121C763428 /* Pods */,
+				01BAF05A48206360B0B23E07 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +234,12 @@
 		153DF709261AC8BF00D2364C /* AccountDetail */ = {
 			isa = PBXGroup;
 			children = (
+				153DF74C261AF00B00D2364C /* AccountDetailPresenter.swift */,
+				153DF74D261AF00B00D2364C /* AccountDetailWorker.swift */,
+				153DF74E261AF00B00D2364C /* AccountDetailRouter.swift */,
+				153DF74F261AF00B00D2364C /* AccountDetailModels.swift */,
+				153DF750261AF00B00D2364C /* AccountDetailViewController.swift */,
+				153DF751261AF00B00D2364C /* AccountDetailInteractor.swift */,
 			);
 			path = AccountDetail;
 			sourceTree = "<group>";
@@ -193,6 +254,7 @@
 		153DF72A261AD45600D2364C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				153DF75B261AF0DC00D2364C /* WebService */,
 				153DF73E261AE78C00D2364C /* Models */,
 				153DF72B261AD46A00D2364C /* CacheKeys.swift */,
 			);
@@ -208,6 +270,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		153DF75B261AF0DC00D2364C /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				153DF764261AF0FB00D2364C /* API.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,9 +285,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 153DF6FA261AC88E00D2364C /* Build configuration list for PBXNativeTarget "BankTest" */;
 			buildPhases = (
+				65EA3FD0A6B2266F0C6A193D /* [CP] Check Pods Manifest.lock */,
 				153DF6CC261AC88B00D2364C /* Sources */,
 				153DF6CD261AC88B00D2364C /* Frameworks */,
 				153DF6CE261AC88B00D2364C /* Resources */,
+				BAE600FED6F37C7E8832B90E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +304,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 153DF6FD261AC88E00D2364C /* Build configuration list for PBXNativeTarget "BankTestTests" */;
 			buildPhases = (
+				D09D6A7CE24805B92074CF49 /* [CP] Check Pods Manifest.lock */,
 				153DF6E2261AC88E00D2364C /* Sources */,
 				153DF6E3261AC88E00D2364C /* Frameworks */,
 				153DF6E4261AC88E00D2364C /* Resources */,
@@ -250,9 +323,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 153DF700261AC88E00D2364C /* Build configuration list for PBXNativeTarget "BankTestUITests" */;
 			buildPhases = (
+				6419E8ABEF15C8349CA367F4 /* [CP] Check Pods Manifest.lock */,
 				153DF6ED261AC88E00D2364C /* Sources */,
 				153DF6EE261AC88E00D2364C /* Frameworks */,
 				153DF6EF261AC88E00D2364C /* Resources */,
+				2615F5085724F795A2C0AD1C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -333,22 +408,132 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2615F5085724F795A2C0AD1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BankTest-BankTestUITests/Pods-BankTest-BankTestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BankTest-BankTestUITests/Pods-BankTest-BankTestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BankTest-BankTestUITests/Pods-BankTest-BankTestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6419E8ABEF15C8349CA367F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BankTest-BankTestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65EA3FD0A6B2266F0C6A193D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BankTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAE600FED6F37C7E8832B90E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BankTest/Pods-BankTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BankTest/Pods-BankTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BankTest/Pods-BankTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D09D6A7CE24805B92074CF49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BankTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		153DF6CC261AC88B00D2364C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				153DF748261AE9C000D2364C /* Lancamentos.swift in Sources */,
+				153DF756261AF00B00D2364C /* AccountDetailViewController.swift in Sources */,
+				153DF755261AF00B00D2364C /* AccountDetailModels.swift in Sources */,
 				153DF711261AC8D400D2364C /* LoginWorker.swift in Sources */,
+				153DF757261AF00B00D2364C /* AccountDetailInteractor.swift in Sources */,
 				153DF710261AC8D400D2364C /* LoginPresenter.swift in Sources */,
+				153DF752261AF00B00D2364C /* AccountDetailPresenter.swift in Sources */,
 				153DF713261AC8D400D2364C /* LoginModels.swift in Sources */,
 				153DF712261AC8D400D2364C /* LoginRouter.swift in Sources */,
 				153DF740261AE7A800D2364C /* Cliente.swift in Sources */,
 				153DF714261AC8D400D2364C /* LoginViewController.swift in Sources */,
 				153DF6D4261AC88B00D2364C /* AppDelegate.swift in Sources */,
 				153DF6D6261AC88B00D2364C /* SceneDelegate.swift in Sources */,
+				153DF753261AF00B00D2364C /* AccountDetailWorker.swift in Sources */,
 				153DF715261AC8D400D2364C /* LoginInteractor.swift in Sources */,
 				153DF72C261AD46A00D2364C /* CacheKeys.swift in Sources */,
+				153DF765261AF0FB00D2364C /* API.swift in Sources */,
+				153DF754261AF00B00D2364C /* AccountDetailRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +706,7 @@
 		};
 		153DF6FB261AC88E00D2364C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A28A4B73B9B2DFF80C89AADB /* Pods-BankTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -539,6 +725,7 @@
 		};
 		153DF6FC261AC88E00D2364C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBE9801741336D0305164B30 /* Pods-BankTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -557,6 +744,7 @@
 		};
 		153DF6FE261AC88E00D2364C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3E93B54670A94F4F6C55982 /* Pods-BankTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -578,6 +766,7 @@
 		};
 		153DF6FF261AC88E00D2364C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE932E260E92FA83B751934E /* Pods-BankTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -599,6 +788,7 @@
 		};
 		153DF701261AC88E00D2364C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7C5150447FEAB6D76F75F60 /* Pods-BankTest-BankTestUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -618,6 +808,7 @@
 		};
 		153DF702261AC88E00D2364C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF8EAB67BEE2E48A72C185BD /* Pods-BankTest-BankTestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

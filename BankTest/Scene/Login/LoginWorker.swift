@@ -12,7 +12,15 @@
 
 import UIKit
 
-    class LoginWorker{
-      func doSomeWork(){
-      }
+class LoginWorker{
+    func doSomeWork(){
     }
+    func doLogin(login: String, completionHandler: @escaping (_ result: Cliente)-> Void){
+        let api = API()
+        api.login(){    (sucess)     in
+            UserDefaults.standard.setValue(login, forKey: CacheKeys.lastLogin.rawValue)
+            completionHandler(sucess)
+        }
+        
+    }
+}

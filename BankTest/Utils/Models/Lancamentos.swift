@@ -11,17 +11,13 @@ import Foundation
 struct Lancamento: Codable {
     var statementList: [LancamentoList]
     
-    enum CodingKeys: String, CodingKey {
-        case statementList = "statementList"
-    }
-    
 }
 
 struct LancamentoList: Codable {
     var title: String
     var desc: String
     var date: String
-    var value: Int
+    var value: Double
     
     enum CodingKeys: String, CodingKey {
         case title = "title"

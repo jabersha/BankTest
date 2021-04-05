@@ -102,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="97" y="81"/>
         </scene>
-        <!--View Controller-->
+        <!--Account Detail View Controller-->
         <scene sceneID="51W-J0-PPv">
             <objects>
-                <viewController id="6ik-EH-OHy" sceneMemberID="viewController">
+                <viewController restorationIdentifier="AccountDetailViewController" storyboardIdentifier="AccountDetailViewController" id="6ik-EH-OHy" customClass="AccountDetailViewController" customModule="BankTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SMK-OG-Gg6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

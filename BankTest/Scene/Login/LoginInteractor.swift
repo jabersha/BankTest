@@ -13,16 +13,21 @@
 import UIKit
 
 protocol LoginBusinessLogic{
-  func doSomething(request: Login.Something.Request)
+    func doSomething(request: Login.Something.Request)
+    func doLogin(request: Login.Something.Request)
 }
 
 protocol LoginDataStore{
-  //var name: String { get set }
+    var clienteData: Cliente { get set }
+
 }
 
 class LoginInteractor: LoginBusinessLogic, LoginDataStore{
-  var presenter: LoginPresentationLogic?
-  var worker: LoginWorker?
+    
+    var presenter: LoginPresentationLogic?
+    var worker: LoginWorker?
+    var clienteData = Cliente()
+
   //var name: String = ""
   
   // MARK: Do something
@@ -34,4 +39,16 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore{
     let response = Login.Something.Response()
     presenter?.presentSomething(response: response)
   }
+    
+    func doLogin(request: Login.Something.Request) {
+        worker = LoginWorker()
+        worker?.doLogin(login: request.login, completionHandler: { (result) in
+            let data = result
+            self.clienteData = data
+            let response = Login.Logged.Response(cliente: result)
+            self.presenter?.presentDetail(response: response)
+//            
+        })
+        
+    }
 }
