@@ -150,7 +150,6 @@ extension String{
     }
     
     var isValidPass:Bool{
-        NSPredicate(format: "SELF MATCHES %@", "(?=[^a-z]*[a-z])(?=[^0-9]*[0-9])[a-zA-Z0-9!@#$%^&*]{4,}"
-).evaluate(with: self)
+        NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[a-z])(?=.*[0-9])(?=.*[$@$#!%*?&])(?=.*[A-Z]).{6,}$").evaluate(with: self)
     }
 }
