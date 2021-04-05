@@ -12,26 +12,22 @@
 
 import UIKit
 
-protocol LoginBusinessLogic
-{
+protocol LoginBusinessLogic{
   func doSomething(request: Login.Something.Request)
 }
 
-protocol LoginDataStore
-{
+protocol LoginDataStore{
   //var name: String { get set }
 }
 
-class LoginInteractor: LoginBusinessLogic, LoginDataStore
-{
+class LoginInteractor: LoginBusinessLogic, LoginDataStore{
   var presenter: LoginPresentationLogic?
   var worker: LoginWorker?
   //var name: String = ""
   
   // MARK: Do something
   
-  func doSomething(request: Login.Something.Request)
-  {
+  func doSomething(request: Login.Something.Request){
     worker = LoginWorker()
     worker?.doSomeWork()
     
