@@ -38,6 +38,8 @@ class LoginViewController: UIViewController, LoginDisplayLogic{
         if data1 != nil && data2 != nil{
             if data2!.isValidPass && data1!.isValidEmail || data1!.isValidCPF || data1!.isValidCPFNumber{
                 doLogin(login: data1!)
+            }else {
+                showAlert()
             }
             
         }
@@ -112,6 +114,13 @@ class LoginViewController: UIViewController, LoginDisplayLogic{
     func displayDetail(viewModel: Login.Logged.ViewModel) {
         passField.text = ""
         router?.routeToDetail(segue: nil)
+    }
+    
+    func showAlert(){
+        
+        let alert = UIAlertController(title: "Aviso", message: "Usuário/Senha incorreto", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func loadLayoutConfig(){
