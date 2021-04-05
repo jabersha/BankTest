@@ -32,16 +32,21 @@ class LoginViewController: UIViewController, LoginDisplayLogic{
     
     @IBAction func loginActBtn(_ sender: Any) {
         
-        let data1 = userField.text
-        let data2 = passField.text
+        guard let data1 = userField.text else {
+            return
+        }
+        guard let data2 = passField.text else {
+            return
+        }
         
-        if data1 != nil && data2 != nil{
-            if data2!.isValidPass && data1!.isValidEmail || data1!.isValidCPF || data1!.isValidCPFNumber{
-                doLogin(login: data1!)
-            }else {
-                showAlert()
-            }
-            
+        let user = data1.isValidCPF || data1.isValidCPFNumber || data1.isValidEmail
+        
+        let pass = data2.isValidPass
+        
+        if user == pass{
+            doLogin(login: data1)
+        } else {
+            showAlert()
         }
         
     }
