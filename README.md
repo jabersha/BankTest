@@ -1,6 +1,6 @@
 # TestBank
 
-Projeto utilizando a Arquitetura MVVM Clean Swift
+Projeto utilizando Clean Swift(VIP)
 
 Tecnologias utilizadas:
 Swift 5.x
